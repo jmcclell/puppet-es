@@ -176,7 +176,7 @@ define es(
     owner   => root,
     group   => root,
     mode    => '0744',
-  }
+  } -> Service[$service_name]
 
   service { $service_name:
     ensure     => running,
